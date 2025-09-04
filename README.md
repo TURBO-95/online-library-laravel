@@ -114,5 +114,3 @@ This project includes seeders and factories to quickly populate the database wit
   - It automatically generates a realistic author name, a unique ISBN, a random genre, a quantity, and a description for each book seeded.
 
 Running `php artisan migrate:fresh --seed` will execute all of these and set up a ready-to-use development environment.
-
-```
