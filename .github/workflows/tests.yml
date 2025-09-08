@@ -34,6 +34,28 @@ jobs:
           extensions: dom, curl, libxml, mbstring, zip, pcntl, pdo, sqlite, pdo_sqlite
           coverage: none
 
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+      
+      - name: Install NPM dependencies
+        run: npm install
+      
+      - name: Build assets
+        run: npm run build
+      
+
+      - name: Prepare Laravel folders
+        run: |
+          mkdir -p bootstrap/cache
+          chmod -R 775 bootstrap/cache
+
+      - name: Prepare Laravel storage
+        run: |
+          mkdir -p storage/framework/{sessions,views,cache}
+          chmod -R 775 storage
+
       - name: Install Composer dependencies
         run: composer install --prefer-dist --no-interaction --no-progress
 
