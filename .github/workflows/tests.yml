@@ -34,6 +34,16 @@ jobs:
           extensions: dom, curl, libxml, mbstring, zip, pcntl, pdo, sqlite, pdo_sqlite
           coverage: none
 
+      - name: Prepare Laravel folders
+        run: |
+          mkdir -p bootstrap/cache
+          chmod -R 775 bootstrap/cache
+
+      - name: Prepare Laravel storage
+        run: |
+          mkdir -p storage/framework/{sessions,views,cache}
+          chmod -R 775 storage
+
       - name: Install Composer dependencies
         run: composer install --prefer-dist --no-interaction --no-progress
 
