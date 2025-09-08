@@ -1,6 +1,7 @@
 # Ignored directories and files
 /.phpunit.cache/
-/bootstrap/cache/
+/bootstrap/cache/*
+!/bootstrap/cache/.gitkeep
 /node_modules/
 /public/build/
 /public/hot
