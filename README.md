@@ -58,12 +58,16 @@ npm install
 ```
 
 #### 3. Setup Your Environment File
-This is a critical step for your database connection.
-
--   Copy the example environment file:
-    ```bash
-    cp .env.example .env
-    ```
+This is a critical step for your database connection. Copy the example environment file to create your own configuration file.
+On Windows (in Command Prompt):
+code
+'''bash
+copy .env.example .env
+```
+**On Linux, macOS, or Windows (using Git Bash):**
+```bash
+cp .env.example .env
+'''
 
 #### 4. Configure Your Database
 You must create a database for the application to use.
@@ -83,7 +87,8 @@ You must create a database for the application to use.
 #### 5. Generate Application Key
 This creates a unique key to secure your application's data.
 ```bash
-php artisan key:generate```
+php artisan key:generate
+```
 
 #### 6. Run Database Migrations and Seeding
 This command will create all the necessary tables in your database (`migrate:fresh`) and then add the default admin user and sample books (`--seed`).
