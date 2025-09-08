@@ -35,7 +35,6 @@
     },
     "scripts": {
     "post-autoload-dump": [
-        "mkdir -p bootstrap/cache storage/framework/sessions storage/framework/views storage/framework/cache storage/logs && chmod -R 777 bootstrap/cache storage",
         "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
         "@php artisan package:discover --ansi"
     ],
