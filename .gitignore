@@ -1,36 +1,12 @@
-# Ignored directories and files
-/.phpunit.cache/
-/bootstrap/cache/*
-!/bootstrap/cache/.gitkeep
-/node_modules/
-/public/build/
+/node_modules
 /public/hot
 /public/storage
-/storage/app/public
-/storage/framework/
-/storage/logs/
-/vendor/
+/storage/*.key
+/vendor
+.env
+.env.backup
+.phpunit.result.cache
 Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
-.env
-.env.backup
-.env.production
-.phpunit.result.cache
-
-# Editor/IDE directories
-.idea/
-.vscode/
-.fleet/
-.zed/
-.nova/
-
-# System files
-.DS_Store
-Thumbs.db
-
-# Miscellaneous
-auth.json
-*.log
-.phpactor.json
