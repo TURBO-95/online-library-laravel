@@ -78,7 +78,7 @@ Follow these instructions to get a copy of the project up and running on your lo
 7. **Run the database migrations and seeders:**
    This is a critical step. The `--seed` flag will run all the seeders to populate your database with default data.
    ```bash
-   php artisan migrate:fresh --seed
+   php artisan migrate --seed
    ```
 
 8. **Start the development servers:**
